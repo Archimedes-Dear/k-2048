@@ -9,17 +9,21 @@ Thanks for gabrielecirulli! [Look github!](https://github.com/gabrielecirulli/20
 
 ## Build
 You can use `docker build` to build container image.
+
 `docker build -t k-2048:<tag> .`
 
 ## Deploy
 `docker build -t k-2048:v1 .`
+
 `kubectl apply -n <namespace> -f deploy/`
 
 ## Visit Web
 Use NodePort:
+
 `kubectl get svc -n <namespace> k-2048`
 
 Use Ingress:
+
 `kubectl get ingress -n <namespace> k-2048`
 
 ## Uninstall
