@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k-2048
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: 2048.cs.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: k-2048
+            port:
+              number: 80
